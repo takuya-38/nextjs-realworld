@@ -1,0 +1,18 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    tty: true
+    volumes:
+      - ./src:/app
+    ports:
+      - "3000:3000"
+    # If you want to run `yarn dev` at docker compose startup
+    command: >
+      sh -c "
+      npm install &&
+      npm add -D eslint-config-prettier prettier prettier-plugin-organize-imports &&
+      npm run dev
+      "
