@@ -1,7 +1,8 @@
-import Head from "next/head";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.css";
+import Header from "@/app/Header";
+import Footer from "@/app/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,8 +13,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <>
-      <Head>
+    <html lang="jp">
+      <head>
         <link
           href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
           rel="stylesheet"
@@ -23,11 +24,13 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
         <link rel="stylesheet" href="//demo.productionready.io/main.css" />
-      </Head>
+      </head>
       <body className={inter.className}>
+        <Header />
         {/* ここにヘッダーやフッターなどのグローバルコンポーネントを追加 */}
         {children}
+        <Footer />
       </body>
-    </>
+    </html>
   );
 }
