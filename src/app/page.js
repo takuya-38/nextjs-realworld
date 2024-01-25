@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -16,34 +16,34 @@ export default function Home() {
             <div className="feed-toggle">
               <ul className="nav nav-pills outline-active">
                 <li className="nav-item">
-                  <a className="nav-link" href="">
+                  <Link className="nav-link" href="">
                     Your Feed
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" href="">
+                  <Link className="nav-link active" href="">
                     Global Feed
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
 
             <div className="article-preview">
               <div className="article-meta">
-                <a href="/profile/eric-simons">
+                <Link href="/profile/eric-simons">
                   <img src="http://i.imgur.com/Qr71crq.jpg" />
-                </a>
+                </Link>
                 <div className="info">
-                  <a href="/profile/eric-simons" className="author">
+                  <Link href="/profile/eric-simons" className="author">
                     Eric Simons
-                  </a>
+                  </Link>
                   <span className="date">January 20th</span>
                 </div>
                 <button className="btn btn-outline-primary btn-sm pull-xs-right">
                   <i className="ion-heart"></i> 29
                 </button>
               </div>
-              <a
+              <Link
                 href="/article/how-to-build-webapps-that-scale"
                 className="preview-link"
               >
@@ -58,25 +58,25 @@ export default function Home() {
                     implementations
                   </li>
                 </ul>
-              </a>
+              </Link>
             </div>
 
             <div className="article-preview">
               <div className="article-meta">
-                <a href="/profile/albert-pai">
+                <Link href="/profile/albert-pai">
                   <img src="http://i.imgur.com/N4VcUeJ.jpg" />
-                </a>
+                </Link>
                 <div className="info">
-                  <a href="/profile/albert-pai" className="author">
+                  <Link href="/profile/albert-pai" className="author">
                     Albert Pai
-                  </a>
+                  </Link>
                   <span className="date">January 20th</span>
                 </div>
                 <button className="btn btn-outline-primary btn-sm pull-xs-right">
                   <i className="ion-heart"></i> 32
                 </button>
               </div>
-              <a href="/article/the-song-you" className="preview-link">
+              <Link href="/article/the-song-you" className="preview-link">
                 <h1>
                   The song you won't ever stop singing. No matter how hard you
                   try.
@@ -91,19 +91,19 @@ export default function Home() {
                     implementations
                   </li>
                 </ul>
-              </a>
+              </Link>
             </div>
 
             <ul className="pagination">
               <li className="page-item active">
-                <a className="page-link" href="">
+                <Link className="page-link" href="">
                   1
-                </a>
+                </Link>
               </li>
               <li className="page-item">
-                <a className="page-link" href="">
+                <Link className="page-link" href="">
                   2
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -113,30 +113,30 @@ export default function Home() {
               <p>Popular Tags</p>
 
               <div className="tag-list">
-                <a href="" className="tag-pill tag-default">
+                <Link href="" className="tag-pill tag-default">
                   programming
-                </a>
-                <a href="" className="tag-pill tag-default">
+                </Link>
+                <Link href="" className="tag-pill tag-default">
                   javascript
-                </a>
-                <a href="" className="tag-pill tag-default">
+                </Link>
+                <Link href="" className="tag-pill tag-default">
                   emberjs
-                </a>
-                <a href="" className="tag-pill tag-default">
+                </Link>
+                <Link href="" className="tag-pill tag-default">
                   angularjs
-                </a>
-                <a href="" className="tag-pill tag-default">
+                </Link>
+                <Link href="" className="tag-pill tag-default">
                   react
-                </a>
-                <a href="" className="tag-pill tag-default">
+                </Link>
+                <Link href="" className="tag-pill tag-default">
                   mean
-                </a>
-                <a href="" className="tag-pill tag-default">
+                </Link>
+                <Link href="" className="tag-pill tag-default">
                   node
-                </a>
-                <a href="" className="tag-pill tag-default">
+                </Link>
+                <Link href="" className="tag-pill tag-default">
                   rails
-                </a>
+                </Link>
               </div>
             </div>
           </div>
