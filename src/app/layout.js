@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { CookiesProvider } from "react-cookie";
 // import "bootstrap/dist/css/bootstrap.css";
 import Header from "@/app/Header";
 import Footer from "@/app/Footer";
