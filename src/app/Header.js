@@ -21,19 +21,19 @@ const Header = ({ hasUserToken }) => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/editor">
+              <a className="nav-link" href="/articles/new">
                 {" "}
                 <i className="ion-compose"></i>&nbsp;New Article{" "}
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/settings">
+              <a className="nav-link" href="/">
                 {" "}
                 <i className="ion-gear-a"></i>&nbsp;Settings{" "}
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/profile/eric-simons">
+              <a className="nav-link" href="/">
                 <img src="" className="user-pic" />
                 Eric Simons
               </a>
