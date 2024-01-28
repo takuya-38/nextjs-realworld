@@ -2,12 +2,10 @@
 import FormButton from "@/app/components/forms/FormButton";
 import FormInput from "@/app/components/forms/FormInput";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
 import { useCookies } from "react-cookie";
 
 const SigninForm = () => {
   const router = useRouter();
-  const [userToken, setUserToken] = useState("");
   const [cookies, setCookie, removeCookie] = useCookies(["usertoken"]);
 
   const onSubmit = async (event) => {
