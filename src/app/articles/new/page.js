@@ -12,7 +12,7 @@ const page = () => {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
-    const response = await fetch("http://localhost:4000/api/articles", {
+    const response = await fetch(`${process.env.HOST}/api/articles`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,

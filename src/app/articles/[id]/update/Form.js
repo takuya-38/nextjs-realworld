@@ -29,7 +29,7 @@ const Form = (props) => {
     };
 
     const response = await fetch(
-      `http://127.0.0.1:4000/api/articles/${props.id}`,
+      `${process.env.HOST}/api/articles/${props.id}`,
       {
         method: "PUT",
         headers: {

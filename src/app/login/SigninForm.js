@@ -12,7 +12,7 @@ const SigninForm = () => {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
-    const response = await fetch("http://localhost:4000/api/users/login", {
+    const response = await fetch(`${process.env.HOST}/api/users/login`, {
       method: "POST",
       body: formData,
     });

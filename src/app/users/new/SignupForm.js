@@ -11,7 +11,7 @@ const SignupForm = () => {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
-    const response = await fetch("http://localhost:4000/api/users", {
+    const response = await fetch(`${process.env.HOST}/api/users`, {
       method: "POST",
       body: formData,
     });
