@@ -22,12 +22,9 @@ const page = async ({ params }) => {
 };
 
 async function getData(id) {
-  const res = await fetch(
-    `http://host.docker.internal:4000/api/articles/${id}`,
-    {
-      cache: "no-store",
-    },
-  );
+  const res = await fetch(`${process.env.HOST}:4000/api/articles/${id}`, {
+    cache: "no-store",
+  });
   return res.json();
 }
 
