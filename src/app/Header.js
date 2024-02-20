@@ -1,6 +1,7 @@
 import { cookies } from "next/headers";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 const Header = ({ hasUserToken }) => {
   const cookieStore = cookies();
@@ -34,8 +35,7 @@ const Header = ({ hasUserToken }) => {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/">
-                <img src="" className="user-pic" />
-                Eric Simons
+                <Image alt="user-pic" src="" className="user-pic" /> Eric Simons
               </a>
             </li>
           </ul>

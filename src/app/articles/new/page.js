@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import { useCookies } from "react-cookie";
 
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const [cookies, setCookie, removeCookie] = useCookies(["usertoken"]);
   const token = cookies["usertoken"];
@@ -12,13 +12,16 @@ const page = () => {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
-    const response = await fetch(`${process.env.HOST}/api/articles`, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${token}`,
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_HOST}/api/articles`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        body: formData,
       },
-      body: formData,
-    });
+    );
 
     const data = await response.json();
     console.log(data);
@@ -91,4 +94,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

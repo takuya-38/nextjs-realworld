@@ -29,7 +29,7 @@ const Form = (props) => {
     };
 
     const response = await fetch(
-      `${process.env.HOST}/api/articles/${props.id}`,
+      `${process.env.NEXT_PUBLIC_HOST}/api/articles/${props.id}`,
       {
         method: "PUT",
         headers: {

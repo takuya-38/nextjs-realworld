@@ -10,9 +10,8 @@ services:
     ports:
       - "3000:3000"
     # If you want to run `yarn dev` at docker compose startup
-    command: >
-      sh -c "
-      npm install &&
-      npm add -D eslint-config-prettier prettier prettier-plugin-organize-imports &&
-      npm run dev
-      "
+    # command: >
+    #   sh -c "
+    #   npm install &&
+    #   npm add -D eslint-config-prettier prettier prettier-plugin-organize-imports &&
+    #   npm run dev"

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -13,7 +14,7 @@ const page = async ({ params }) => {
 
           <div className="article-meta">
             <Link href="/profile/eric-simons">
-              <img src="http://i.imgur.com/Qr71crq.jpg" />
+              <Image alt="eric-simons" src="http://i.imgur.com/Qr71crq.jpg" />
             </Link>
             <div className="info">
               <Link href="/profile/eric-simons" className="author">
@@ -61,7 +62,10 @@ const page = async ({ params }) => {
         <div className="article-actions">
           <div className="article-meta">
             <Link href="profile.html">
-              <img src="http://i.imgur.com/Qr71crq.jpg" />
+              <Image
+                alt="eric-simons-pic"
+                src="http://i.imgur.com/Qr71crq.jpg"
+              />
             </Link>
             <div className="info">
               <Link href="" className="author">
@@ -98,7 +102,8 @@ const page = async ({ params }) => {
                 ></textarea>
               </div>
               <div className="card-footer">
-                <img
+                <Image
+                  alt="eric-simons-pic"
                   src="http://i.imgur.com/Qr71crq.jpg"
                   className="comment-author-img"
                 />
@@ -115,7 +120,8 @@ const page = async ({ params }) => {
               </div>
               <div className="card-footer">
                 <Link href="/profile/author" className="comment-author">
-                  <img
+                  <Image
+                    alt="eric-simons-pic"
                     src="http://i.imgur.com/Qr71crq.jpg"
                     className="comment-author-img"
                   />
@@ -137,7 +143,8 @@ const page = async ({ params }) => {
               </div>
               <div className="card-footer">
                 <Link href="/profile/author" className="comment-author">
-                  <img
+                  <Image
+                    alt="eric-simons-pic"
                     src="http://i.imgur.com/Qr71crq.jpg"
                     className="comment-author-img"
                   />

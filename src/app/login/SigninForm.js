@@ -12,10 +12,13 @@ const SigninForm = () => {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
-    const response = await fetch(`${process.env.HOST}/api/users/login`, {
-      method: "POST",
-      body: formData,
-    });
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_HOST}/api/users/login`,
+      {
+        method: "POST",
+        body: formData,
+      },
+    );
 
     // TODO: Responseのデータを用いてログイン状況を更新する。
     const data = await response.json();

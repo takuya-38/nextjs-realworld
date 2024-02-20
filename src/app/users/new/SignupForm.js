@@ -11,7 +11,7 @@ const SignupForm = () => {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
-    const response = await fetch(`${process.env.HOST}/api/users`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/users`, {
       method: "POST",
       body: formData,
     });

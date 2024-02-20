@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const Home = async () => {
@@ -32,10 +33,13 @@ const Home = async () => {
             </div>
 
             {data.articles.map((article) => (
-              <div className="article-preview">
+              <div className="article-preview" key={article.id}>
                 <div className="article-meta">
                   <Link href="/profile/eric-simons">
-                    <img src="http://i.imgur.com/Qr71crq.jpg" />
+                    <Image
+                      alt="eric-simons-pic"
+                      src="http://i.imgur.com/Qr71crq.jpg"
+                    />
                   </Link>
                   <div className="info">
                     <Link href="/profile/eric-simons" className="author">
@@ -116,7 +120,7 @@ const Home = async () => {
 };
 
 async function getData() {
-  const res = await fetch("http://host.docker.internal:4000/api/articles", {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/articles`, {
     cache: "no-store",
   });
   return res.json();
